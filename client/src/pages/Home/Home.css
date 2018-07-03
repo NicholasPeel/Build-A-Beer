@@ -1,0 +1,61 @@
+
+.info-text{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 100px 30px 120px 30px;
+    text-align: center;
+    border-bottom: 2px solid #5a3e30;
+    border-top: 2px solid #5a3e30;
+    padding: 40px 20px 40px 20px;
+}
+.info-link:link{
+    color: #5a3e30;
+}
+.info-link:hover{
+    color: #e08910;
+}
+.info-link:visited{
+    color: #5a3e30;
+}
+.input{
+    width: 50%;
+    border-color: #e08910;
+    padding:5px 5px 5px 3px;
+}
+.accordion{
+    border: none;
+}
+.log-in{
+    background-color: #a28975;
+    color: #5a3e30;
+    text-align: center;
+    border: none;
+    padding: 15px 0px 3px 0px;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.sign-up{
+    background-color: #5a3e30;
+    color: #a28975;
+    text-align: center; 
+    border: none;   
+    padding: 15px 0px 3px 0px;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.log-in:hover{
+    background-color: #e08910;
+    color: seashell;
+}
+.sign-up:hover{
+    background-color: #e08910;
+    color: seashell;
+}
+.body{
+    text-align: center;
+}
+
+
+
+

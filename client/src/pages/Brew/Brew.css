@@ -1,0 +1,45 @@
+.brew-page{
+    border-top: 2px solid #5a3e30;
+    padding: 100px 200px 300px 200px;
+}
+.brew-tab{
+    margin-bottom: 30px;
+    /* box-shadow: 3px 3px 20px 3px gray; */
+}
+.brew-title{
+    color: #5a3e30;
+    font-size: 45px;
+    border-bottom: 2px solid #5a3e30;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.brew-desc{
+    margin-bottom: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #5a3e30;
+    font-size: 20px;
+}
+.create-brew-btn{
+    padding-top: 12px;
+    margin-top: 100px;
+    background-color: #5a3e30;
+    color: #a28975;
+    border:0;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.brew-btn-div{
+    text-align: center;
+}
+.create-brew-btn:hover{
+    background-color: #e08910;
+    color: seashell;
+}
+
+

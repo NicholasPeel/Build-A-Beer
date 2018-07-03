@@ -1,0 +1,11 @@
+.input-button{
+    background-color:#5a3e30;
+    color: #a28975;
+    width: 200px;
+    height: 60px;  
+    font-size: 24px;
+}
+.input-button:hover{
+    background-color: #e08910;
+    color: seashell;
+}

@@ -1,0 +1,40 @@
+.page{
+    background-color: seashell;
+}
+.logo{
+    background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX4661956.jpg");
+    height: 450px; 
+    position: relative; 
+}
+.t-1{
+    font-family: 'Londrina Outline', cursive;
+    color:#e08910;
+    font-size: 300px;
+    margin-left: 60px;
+    position: absolute;
+    font-weight: normal;
+    text-decoration-line: underline;
+    text-shadow: 2px 2px 5px black;
+}
+.t-2{
+    font-family: 'IM Fell English SC', serif;
+    color:#e08910;
+    font-size: 340px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 20px;
+    position: absolute;
+    top: 70px;
+    left: 910px;
+    text-shadow: 2px 2px 5px black;
+}
+.foot{
+    width: 100%;
+    background-color: #5a3e30;
+    color: seashell;
+    height: 100px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 24px; 
+}
