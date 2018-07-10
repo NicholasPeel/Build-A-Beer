@@ -12,19 +12,79 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import styles from "./Home.css";
-import Slideshow from "../../components/Slideshow/Slideshow"
+import Slideshow from "../../components/Slideshow/Slideshow";
 
 class Home extends Component {
   state = {
     firstName: "",
     lastName: "",
     email: "",
-    password: ""
+    password: "",
+    id: "",
+    beerNum: 0
   };
 
   componentDidMount() {
-
+    console.log(sessionStorage);
   }
+
+  handleLoginSubmit = event => {
+    event.preventDefault();
+    if (this.state.email && this.state.password) {
+      API.loginUser({
+        email: this.state.email,
+        password: this.state.password
+      })
+        .then(res => {
+          console.log(res.data);
+          this.setState({
+            firstName: res.data.firstName,
+            lastName: res.data.lastName,
+            email: res.data.email,
+            password: res.data.password,
+            id: res.data._id,
+            beerNum: res.data.beerNum
+          })
+          sessionStorage.setItem("firstName", this.state.firstName);
+          sessionStorage.setItem("lastName", this.state.lastName);
+          sessionStorage.setItem("beerNum", this.state.beerNum);
+          sessionStorage.setItem("email", this.state.email);
+          sessionStorage.setItem("password", this.state.password);
+          sessionStorage.setItem("id", this.state.id);
+          window.location = "/dashboard";
+          console.log(this.state);
+        })
+        .catch(err => console.log(err));
+    }
+  };
+
+  handleRegisterSubmit = event => {
+    event.preventDefault();
+    if (this.state.firstName && this.state.lastName && this.state.email && this.state.password) {
+      API.registerUser({
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password,
+        beerNum: 0
+      })
+        .then(res => {
+          this.setState({
+            id: res.data._id,
+            beerNum: 0
+          })
+          sessionStorage.setItem("firstName", this.state.firstName);
+          sessionStorage.setItem("lastName", this.state.lastName);
+          sessionStorage.setItem("beerNum", this.state.beerNum);
+          sessionStorage.setItem("email", this.state.email);
+          sessionStorage.setItem("password", this.state.password);
+          sessionStorage.setItem("id", this.state.id);
+          window.location = "/dashboard";
+          console.log(this.state);
+        })
+        .catch(err => console.log(err));
+    }
+  };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -39,42 +99,46 @@ class Home extends Component {
 
         <Accordion className="accordion">
           <AccordionItem>
-            <AccordionItemTitle className="sign-up">
+            <AccordionItemTitle className="sign-up hvr-fade hvr-grow-shadow">
               <p><i className="fas fa-beer"></i> Sign Up Now</p>
             </AccordionItemTitle>
             <AccordionItemBody >
               <form className="body">
                 <Input
                   className="input"
+                  type="text"
                   value={this.state.firstName}
                   onChange={this.handleInputChange}
                   name="firstName"
-                  placeholder="First Name (required)"
+                  placeholder="First Name"
                 />
                 <Input
                   className="input"
+                  type="text"
                   value={this.state.lastName}
                   onChange={this.handleInputChange}
                   name="lastName"
-                  placeholder="Last Name (required)"
+                  placeholder="Last Name"
                 />
                 <Input
                   className="input"
+                  type="email"
                   value={this.state.email}
                   onChange={this.handleInputChange}
                   name="email"
-                  placeholder="Email (required)"
+                  placeholder="Email"
                 />
                 <Input
                   className="input"
+                  type="password"
                   value={this.state.password}
                   onChange={this.handleInputChange}
                   name="password"
-                  placeholder="Password (required)"
+                  placeholder="Password"
                 />
                 <FormBtn
-                  disabled={!(this.state.author && this.state.title)}
-                  onClick={this.handleFormSubmit}
+                  disabled={!(this.state.firstName && this.state.lastName && this.state.email && this.state.password)}
+                  onClick={this.handleRegisterSubmit}
                 >
                   Submit
               </FormBtn>
@@ -85,13 +149,13 @@ class Home extends Component {
 
         <Accordion className="accordion">
           <AccordionItem>
-            <AccordionItemTitle className="log-in">
+            <AccordionItemTitle className="log-in hvr-fade hvr-grow-shadow">
               <p><i className="fas fa-beer"></i> Login To Your Dashboard</p>
             </AccordionItemTitle>
             <AccordionItemBody >
               <form className="body">
                 <Input
-
+                  type="email"
                   className="input"
                   value={this.state.email}
                   onChange={this.handleInputChange}
@@ -99,6 +163,7 @@ class Home extends Component {
                   placeholder="email"
                 />
                 <Input
+                  type="password"
                   className="input"
                   value={this.state.password}
                   onChange={this.handleInputChange}
@@ -106,8 +171,8 @@ class Home extends Component {
                   placeholder="password"
                 />
                 <FormBtn
-                  disabled={!(this.state.author && this.state.title)}
-                  onClick={this.handleFormSubmit}
+                  disabled={!(this.state.email && this.state.password)}
+                  onClick={this.handleLoginSubmit}
                 >
                   Submit
               </FormBtn>
@@ -118,7 +183,7 @@ class Home extends Component {
 
         <Slideshow />
 
-        <p className="info-text">Was the awesome slideshow and cool graphics not enough to convince you to sign up for this awesome service? Do you need more information on how it works?<a className="info-link" href="/info"> Click here</a></p>
+        <p className="info-text">Custom Tap allows it's users all the fun of creating and customizing your own beer without the learning curve, mess, or equipment. Need more information on how it works?<a className="btn info-link hvr-fade hvr-grow-shadow" href="/info"> Click Here</a></p>
       </div>
     );
   }

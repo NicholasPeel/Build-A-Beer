@@ -4,27 +4,24 @@ import styles from "./CheckboxOrRadioGroup.css";
 
 const CheckboxOrRadioGroup = (props) => (
   <div>
-    <label className="form-label group-desc">{props.title}</label>
+    <label className="form-label form-label-desc">{props.title}</label>
     <div className="checkbox-group">
       {props.options.map(opt => {
         return (
-          <label key={opt} className="form-label capitalize">
-
+          <label key={opt.name} className="form-label capitalize" data-tip={opt.desc} data-for={opt.name}>
+            <ReactTooltip className="toolTip" id={opt.name} type='dark' getContent={(dataTip) => `${dataTip}`} />
             <input
               className="form-checkbox"
               name={props.setName}
               onChange={props.controlFunc}
-              value={opt}
-              checked={props.selectedOptions.indexOf(opt) > -1}
-              type={props.type} /> {opt}
+              value={opt.name}
+              checked={props.selectedOptions.indexOf(opt.name) > -1}
+              type={props.type} /> {opt.name}
           </label>
         );
       })}
     </div>
   </div>
-
-  //  data - tip={ props.toolTip } data -for= { opt }
-  // <ReactTooltip id={opt} type='dark' getContent={(dataTip) => `${dataTip}`} />
 );
 
 export default CheckboxOrRadioGroup;

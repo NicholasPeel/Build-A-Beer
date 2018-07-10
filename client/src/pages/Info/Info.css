@@ -5,21 +5,23 @@
 }
 .info-card{
     margin-bottom: 50px;
+    background-color: #5a3e30;
+    border-radius: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 1px solid black;
+    padding: 50px 0px 50px 0px;
 }
 .info{
-    border-top: 2px solid #5a3e30;
-    border-bottom: 2px solid #5a3e30;
-    color: #5a3e30;
+    color: seashell;
     font-size: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
     margin-left: 20px;
 }
 .info-img{
     display: inline-block;
     border-radius: 40px;
     border: 1px solid #5a3e30;
-    box-shadow: 4px 4px 20px 5px gray;
+    box-shadow: 4px 4px 15px 5px black;
     height: 200px;
     width: 200px;
 }
@@ -34,14 +36,12 @@
     font-size: 28px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: 20px;
-    
+    border-radius: 15px;
+    background-color: #5a3e30;
 }
 .main-page-link:link{
-    color: #5a3e30;
-}
-.main-page-link:hover{
-    color: #e08910;
+    color: seashell;
 }
 .main-page-link:visited{
-    color: #5a3e30;
+    color: seashell;
 }

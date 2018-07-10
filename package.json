@@ -21,15 +21,19 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
+    "hover.css": "^2.3.2",
     "if-env": "^1.0.4",
     "mongoose": "^5.0.17",
     "react": "^16.4.1",
     "react-accessible-accordion": "^2.4.2",
     "react-dom": "^16.4.1",
+    "react-images-upload": "^1.1.99",
     "react-radio-group": "^3.0.3",
     "react-responsive-accordion": "^1.0.0",
+    "react-responsive-modal": "^3.0.3",
     "react-slick": "^0.23.1",
     "react-tooltip": "^3.6.1"
   }

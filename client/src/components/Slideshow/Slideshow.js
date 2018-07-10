@@ -23,7 +23,6 @@ class Slideshow extends Component {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
-            pauseOnDotsHover: true,
             adaptiveHeight: true
         };
         return (
@@ -48,7 +47,7 @@ class Slideshow extends Component {
                 </div>
                 <div>
                     <slide className="slide">
-                        <div className="layer"><img className="slide-img" src="http://kirkwoodstationbrewing.com/wp-content/uploads/2013/07/ksb-our-beers-header.jpg" alt="img" width="100%" height="600px"></img></div>
+                        <div className="layer"><img className="slide-img" src="https://www.hmbbrewingco.com/images/home-slider-3/HMB_HOME_Slideshow_1.jpg" alt="img" width="100%" height="600px"></img></div>
                         <span className="slide-text">Design a logo and name your beer.</span>
                     </slide>
                 </div>
@@ -61,7 +60,7 @@ class Slideshow extends Component {
                 <div>
                     <slide className="slide">
                         <div className="layer"><img className="slide-img" src="http://www.crystalbeerparlor.com/blog/wp-content/uploads/2014/05/beers-header.jpg" alt="img" width="100%" height="600px"></img></div>
-                        <span className="slide-text">Learn about brewing beer at the univerity</span>
+                        <span className="slide-text">Learn about brewing beer at the university</span>
                     </slide>
                 </div>
                 <div>

@@ -1,0 +1,14 @@
+.recipe-title{
+    text-align: center; 
+    margin-left: 35%;
+    width: 30%;
+    color: #5a3e30;
+    font-size: 45px;
+    border-bottom: 2px solid #5a3e30;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.recipe-dash-btn{
+    margin: 20px 0px 0px 20px;
+}

@@ -29,6 +29,7 @@
     text-shadow: 2px 2px 5px black;
 }
 .foot{
+    clear: both;
     width: 100%;
     background-color: #5a3e30;
     color: seashell;

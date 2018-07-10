@@ -40,7 +40,7 @@ class Info extends Component {
 
           </div>
           <div className="col-md-6">
-            <p className="info">Learn about brewing beer from the "Beer University Tab" or look at other recipes users have created in the "Recipes Tab"</p>
+            <p className="info">Learn about brewing beer from the "Beer University" or look at other recipes users have created all from your dashboard</p>
           </div>
         </div>
         <div className="row info-card justify-content-center align-items-center">
@@ -49,7 +49,7 @@ class Info extends Component {
 
           </div>
           <div className="col-md-6">
-            <p className="info">Create a new beer by clicking on the "Create Beer" button in the "Your Beers Tab".</p>
+            <p className="info">Create a new beer by clicking on the "Create Beer" button in your dashboard.</p>
           </div>
         </div>
         <div className="row info-card justify-content-center align-items-center">
@@ -58,7 +58,7 @@ class Info extends Component {
 
           </div>
           <div className="col-md-6">
-            <p className="info">Navigate through the choices and select from our premium ingredients including Yiest, Malt, Hops, and addons. Each brew will contain an approximate 5 gallon batch of beer, equaling approximately 48 bottles of beer.</p>
+            <p className="info">Navigate through the choices and select from our premium ingredients including Yiest, Base Malt, Specialty Grains, Adjuncts, Hops, and addons. Each brew will contain an approximate 5 gallon batch of beer, equaling approximately 48 bottles of beer.</p>
           </div>
         </div>
         <div className="row info-card justify-content-center align-items-center">
@@ -85,57 +85,11 @@ class Info extends Component {
 
           </div>
           <div className="col-md-6">
-            <p className="info">Check the progess of your beers from the "Your Beers Tab" in the dashboard</p>
+            <p className="info">Check the progess of your beers from your dashboard</p>
           </div>
         </div>
-
-        <Accordion>
-          <AccordionItem>
-            <AccordionItemTitle className="sign-up">
-              <p><i class="fas fa-beer"></i> Sign Up Now</p>
-            </AccordionItemTitle>
-            <AccordionItemBody>
-              <form>
-                <Input
-                  className="input"
-                  value={this.state.firstName}
-                  onChange={this.handleInputChange}
-                  name="firstName"
-                  placeholder="First Name (required)"
-                />
-                <Input
-                  className="input"
-                  value={this.state.lastName}
-                  onChange={this.handleInputChange}
-                  name="lastName"
-                  placeholder="Last Name (required)"
-                />
-                <Input
-                  className="input"
-                  value={this.state.email}
-                  onChange={this.handleInputChange}
-                  name="email"
-                  placeholder="Email (required)"
-                />
-                <Input
-                  className="input"
-                  value={this.state.password}
-                  onChange={this.handleInputChange}
-                  name="password"
-                  placeholder="Password (required)"
-                />
-                <FormBtn
-                  disabled={!(this.state.author && this.state.title)}
-                  onClick={this.handleFormSubmit}
-                >
-                  Submit
-              </FormBtn>
-              </form>
-            </AccordionItemBody>
-          </AccordionItem>
-        </Accordion>
         <div className="row justify-content-center mt-3">
-          <a className="main-page-link" href="/">Main Page</a>
+          <a className="main-page-link btn hvr-fade hvr-grow-shadow" href="/">Main Page</a>
         </div>
 
       </div>

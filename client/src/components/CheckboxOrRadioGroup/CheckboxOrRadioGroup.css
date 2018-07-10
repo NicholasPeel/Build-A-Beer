@@ -2,8 +2,17 @@
     color: #5a3e30;
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-bottom: 40px; 
+    margin-bottom: 30px;  
+}
+.form-label-desc{
+    border-bottom: 1px solid #5a3e30;
+    padding-bottom: 10px;
 }
 .capitalize{
-    margin: 0px 50px 20px 0px;
+    margin: 0px 50px 40px 0px;
+}
+.toolTip{
+    width: 300px;
+     font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
